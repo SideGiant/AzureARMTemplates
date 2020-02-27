@@ -1,10 +1,10 @@
 ﻿### Define variables
 {
 
-$location = 'Australia Southeast'
-$resourceGroupName = 'contoso-arm-nested'
-$resourceDeploymentSolutionName = 'contoso-arm-nested-deployment'
-$templateBasePath = $env:SystemDrive + '\' + 'pluralsight' + '\' + 'nested'
+$location = 'East US'
+$resourceGroupName = 'Levogy-Compute1'
+$resourceDeploymentSolutionName = 'Levogy-Compute1-deployment'
+$templateBasePath = 'C:\Users\AaronBrewer\Source\Repos\SideGiant\AzureARMTemplates'
 $templateFile = 'azureDeploy.json'
 $template = $templateBasePath + '\' + $templateFile
 $templateParametersFile = 'azureDeploy.parameters.json'
