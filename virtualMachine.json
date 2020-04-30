@@ -69,10 +69,16 @@
       "metadata": {
         "description": "Network interface for the virtual machine."
       }
+    },
+    "vmNameOverride": {
+      "type": "string",
+      "metadata": {
+        "description": "Name to use on the VM."
+      }
     }
   },
   "variables": {
-    "vmName": "[concat(parameters('vmNamePrefix'),'-',parameters('deploymentType'))]",
+    "vmName": "[if(empty(parameters('vmNameOverride')), concat(parameters('vmNamePrefix'),'-',parameters('deploymentType')), parameters('vmNameOverride'))]",
     "vmOSDiskName": "[concat(variables('vmName'),'-','osdisk')]"
   },
   "resources": [
