@@ -120,7 +120,7 @@
               "diskSizeGB": 100,
               "lun": 0,
               "vhd": {
-                "uri": "[concat(reference(resourceId('Microsoft.Storage/storageAccounts/', parameters('storageAccountName'))).primaryEndpoints.blob, 'vhds/datadisk1.vhd')]"
+                "uri": "[concat('http://', parameters('storageAccountName'), '.blob.core.windows.net/', parameters('deploymentType'), '/', variables('vmOSDiskName'), 'dataDisk.vhd')]",
               },
               "createOption": "Empty"
             }
